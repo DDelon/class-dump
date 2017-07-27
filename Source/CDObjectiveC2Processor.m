@@ -250,6 +250,7 @@
     
     NSString *className = [self.machOFile stringAtAddress:objc2ClassData.name];
     if (isSwiftClass && className.length > 4) {
+        return nil;
         NSScanner *scanner = [NSScanner scannerWithString:[className substringFromIndex:4]];
         NSInteger length;
         NSString *moduleName; // TODO: (2014-06-03) Do something with the module name?
